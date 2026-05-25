@@ -1,4 +1,4 @@
-/* global React, Nav, Hero, Modules, InstallTerminal, CompressionDemo, Numbers, Architecture, Editors, Releases, FAQ, DocsLinks, Footer, useTweaks, TweaksPanel, TweakSection, TweakRadio, TweakToggle, TweakSelect */
+/* global React, Nav, Hero, Modules, InstallTerminal, CompressionDemo, Numbers, Architecture, Editors, Releases, FAQ, DocsLinks, Footer */
 
 // ============================================================
 // TWEAK DEFAULTS — wrapped in EDITMODE markers for persistence
@@ -15,9 +15,10 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 // APP — top-level composition
 // ============================================================
 function App() {
+  const t = TWEAK_DEFAULTS;
 
   // theme persistence — sync to <html data-theme="…">
-  // Priority: explicit user choice (localStorage) > tweak override > OS preference.
+  // Priority: explicit user choice (localStorage) > OS preference.
   const getSystemTheme = () =>
     (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
       ? 'dark' : 'light';
@@ -27,7 +28,6 @@ function App() {
       const saved = localStorage.getItem('ws-theme');
       if (saved === 'light' || saved === 'dark') return saved;
     } catch (_) {}
-    if (t.theme === 'light' || t.theme === 'dark') return t.theme;
     return getSystemTheme();
   });
   const [hasExplicitChoice, setHasExplicitChoice] = React.useState(() => {
@@ -57,16 +57,9 @@ function App() {
     try { localStorage.setItem('ws-theme', next); } catch (_) {}
   };
 
-  // Reflect tweak panel changes to actual theme state
-  React.useEffect(() => {
-    if (t.theme && t.theme !== theme) setTheme(t.theme);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [t.theme]);
-
   const onToggleTheme = () => {
     const next = theme === 'light' ? 'dark' : 'light';
     choose(next);
-    setTweak('theme', next);
   };
 
   // Headline accent CSS var override (for "headlineAccent" tweak)
@@ -123,37 +116,6 @@ function App() {
       </main>
 
       <Footer />
-
-      <TweaksPanel>
-        <TweakSection label="Theme" />
-        <TweakRadio
-          label="Mode" value={theme}
-          options={['light', 'dark']}
-          onChange={(v) => { choose(v); setTweak('theme', v); }}
-        />
-        <TweakSelect
-          label="Headline accent" value={t.headlineAccent}
-          options={['acid', 'magenta', 'royal']}
-          onChange={(v) => setTweak('headlineAccent', v)}
-        />
-
-        <TweakSection label="Hero" />
-        <TweakSelect
-          label="Variant" value={t.heroVariant}
-          options={[
-            { value: 'display', label: 'Display headline' },
-            { value: 'bignum',  label: 'Big number (4800 → 11)' },
-            { value: 'arch',    label: 'Architecture-first' },
-          ]}
-          onChange={(v) => setTweak('heroVariant', v)}
-        />
-
-        <TweakSection label="Sections" />
-        <TweakToggle label="Marquee ticker"  value={t.showMarquee}
-          onChange={(v) => setTweak('showMarquee', v)} />
-        <TweakToggle label="Architecture diagram" value={t.showArchitecture}
-          onChange={(v) => setTweak('showArchitecture', v)} />
-      </TweaksPanel>
     </React.Fragment>
   );
 }
