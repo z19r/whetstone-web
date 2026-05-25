@@ -95,7 +95,6 @@ function App() {
             <div className="marquee-track">
               <span>RUST 2021 <span className="sep">·</span></span>
               <span>MIT <span className="sep">·</span></span>
-              <span>ZERO DEPS <span className="sep">·</span></span>
               <span>HEADROOM · RTK · MEMORY <span className="sep">·</span></span>
               <span>ONE BINARY <span className="sep">·</span></span>
               <span>97% ACC @ 19% TOK · SQUAD V2 <span className="sep">·</span></span>
@@ -104,7 +103,6 @@ function App() {
               {/* duplicate for seamless loop */}
               <span>RUST 2021 <span className="sep">·</span></span>
               <span>MIT <span className="sep">·</span></span>
-              <span>ZERO DEPS <span className="sep">·</span></span>
               <span>HEADROOM · RTK · MEMORY <span className="sep">·</span></span>
               <span>ONE BINARY <span className="sep">·</span></span>
               <span>97% ACC @ 19% TOK · SQUAD V2 <span className="sep">·</span></span>

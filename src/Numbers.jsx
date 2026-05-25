@@ -105,14 +105,6 @@ function Numbers() {
           label="CARGO TEST · 4,800 → 11"
           sub="REAL RUN · WHETSTONE TESTS"
         />
-        <StatCell
-          ix="// BINARY"
-          value={1}
-          format={(v) => Math.round(v)}
-          unit=" BIN"
-          label="ZERO DEPENDENCIES"
-          sub="STATIC RUST · 11 TESTS"
-        />
       </div>
     </section>
   );

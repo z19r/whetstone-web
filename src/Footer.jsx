@@ -63,7 +63,7 @@ function Footer() {
 
         <div className="meta">
           <span>// WHETSTONE · v2.2.2 · {new Date().getFullYear()}</span>
-          <span>RUST 2021 · MIT · ZERO DEPS</span>
+          <span>MADE IN CHICAGO, WITH 🫀 ©2026 z19r. All rights reserved.</span>
           <span>BUILT IN A SHED · NO TELEMETRY</span>
         </div>
       </div>

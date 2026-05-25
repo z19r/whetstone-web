@@ -29,7 +29,6 @@ function HeroBadges() {
       <span className="ws-badge ws-badge--royal">CRATES.IO · v2.2.2</span>
       <span className="ws-badge ws-badge--mag">MIT</span>
       <span className="ws-badge ws-badge--bone">RUST 2021</span>
-      <span className="ws-badge ws-badge--ghost">ZERO DEPS</span>
     </div>
   );
 }
