@@ -15,7 +15,6 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 // APP — top-level composition
 // ============================================================
 function App() {
-  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
 
   // theme persistence — sync to <html data-theme="…">
   // Priority: explicit user choice (localStorage) > tweak override > OS preference.
