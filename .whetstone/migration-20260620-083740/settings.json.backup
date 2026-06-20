@@ -1,0 +1,669 @@
+{
+  "env": {
+    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR": "true",
+    "ECC_DISABLED_HOOKS": "pre:edit-write:gateguard-fact-force,pre:bash:gateguard-fact-force"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(just *)",
+      "Bash(pkill -f \"rails server\")",
+      "Bash(pkill -f \"bin/dev\")",
+      "Bash(pkill -f \"puma\")",
+      "Bash(git checkout:*)",
+      "Bash(bin/rails test:*)",
+      "Bash(RAILS_ENV=test SHARE_HMAC_SECRET=test RAILS_ACTIVE_RECORD_ENCRYPTION_PRIMARY_KEY=test RAILS_ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY=test RAILS_ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT=test bin/rails test test/models/upload_theme_test.rb)",
+      "Bash(RAILS_ENV=test POSTGRES_HOST=localhost POSTGRES_PORT=5432 POSTGRES_USER=postgres POSTGRES_PASSWORD= POSTGRES_DB=markbin_test POSTGRES_DB_TEST=markbin_test STRIPE_SECRET_KEY=test_key_default SHARE_HMAC_SECRET=test RAILS_ACTIVE_RECORD_ENCRYPTION_PRIMARY_KEY=test RAILS_ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY=test RAILS_ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT=test bin/rails db:test:prepare)",
+      "Bash(git commit:*)",
+      "Bash(git add:*)",
+      "Bash(spd-say \"Task complete\")",
+      "Bash(espeak \"Task complete\")",
+      "Bash(rtk proxy:*)",
+      "Bash(pkill -f \"bin/rails server\")",
+      "Bash(just dev:*)",
+      "Bash(spd-say \"Server restarted, hard refresh the browser\")",
+      "Bash(espeak \"Server restarted, hard refresh the browser\")",
+      "Bash(bin/rails runner:*)",
+      "Bash(bin/rails routes:*)",
+      "Bash(bin/rails generate:*)",
+      "Bash(just migrate:*)",
+      "Bash(RAILS_ENV=test bin/rails db:migrate)",
+      "Bash(find /home/zrk/code/markbin-dot-net -type f -name *upload*)",
+      "Bash(git mv:*)",
+      "Bash(sed -i \"s|/uploads/fetch_gist|/documents/fetch_gist|g\" /home/zrk/code/markbin-dot-net/app/javascript/controllers/document_controller.js)",
+      "Bash(sed -i \"s|new upload page|new document page|g\" /home/zrk/code/markbin-dot-net/app/javascript/controllers/markdown_editor_controller.js)",
+      "Bash(git push:*)",
+      "Bash(gh pr:*)",
+      "Bash(gem list:*)",
+      "Bash(bundler --version)",
+      "WebSearch",
+      "Bash(rails new:*)",
+      "Bash(bin/rails db:create:*)",
+      "Bash(sudo systemctl:*)",
+      "Bash(pg_isready)",
+      "Bash(ruby -c app/models/*.rb)",
+      "Bash(ruby -c app/controllers/*.rb app/controllers/concerns/*.rb)",
+      "Bash(ruby -c app/controllers/admin/*.rb)",
+      "Bash(ruby -c app/services/*.rb)",
+      "Bash(ruby -c app/jobs/*.rb)",
+      "Bash(ruby -c config/routes.rb)",
+      "Bash(ruby -c config/initializers/sidekiq.rb config/initializers/stripe.rb config/initializers/sentry.rb config/initializers/rack_attack.rb config/initializers/pagy.rb)",
+      "Bash(ruby -c db/migrate/*.rb)",
+      "Bash(ruby -e 'require '\\\\''erb'\\\\''; ERB.new\\(File.read\\('\\\\''__TRACKED_VAR__'\\\\''\\)\\)')",
+      "Bash(bin/rails tailwindcss:build:*)",
+      "Bash(ls app/models/*.rb)",
+      "Bash(ls app/controllers/*.rb app/controllers/concerns/*.rb app/controllers/admin/*.rb)",
+      "Bash(ls app/services/*.rb)",
+      "Bash(ls app/jobs/*.rb)",
+      "Bash(ls app/mailers/*.rb)",
+      "Bash(pg_isready -h localhost)",
+      "Bash(pg_isready -h 127.0.0.1)",
+      "Bash(pg_isready -h localhost -p 5433)",
+      "Bash(pg_isready -h localhost -p 5434)",
+      "Bash(bin/rails db:migrate:*)",
+      "Bash(bin/rails db:seed:*)",
+      "Bash(bin/dev)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(bundle exec:*)",
+      "Bash(ruby:*)",
+      "Bash(gh auth:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(chmod +x:*)",
+      "mcp__render__list_services",
+      "mcp__render__list_workspaces",
+      "Bash(git filter-branch:*)",
+      "Bash(RAILS_ENV=test bin/rails db:test:prepare:*)",
+      "Bash(RAILS_ENV=test bundle exec ruby -Itest test/controllers/passwords_controller_test.rb)",
+      "Bash(RAILS_ENV=test bundle exec:*)",
+      "Bash(gh run:*)",
+      "Bash(git check-ignore:*)",
+      "mcp__render__select_workspace",
+      "mcp__render__get_postgres",
+      "mcp__render__get_key_value",
+      "mcp__render__create_web_service",
+      "mcp__render__list_postgres_instances",
+      "mcp__render__update_environment_variables",
+      "Bash(RAILS_ENV=production bin/rails runner:*)",
+      "Bash(RAILS_MASTER_KEY=0b2abeef8a87a2763de9669a8d1fa126 bin/rails credentials:show)",
+      "Bash(RAILS_ENV=production RAILS_MASTER_KEY=0b2abeef8a87a2763de9669a8d1fa126 bin/rails runner \"puts 'boot ok'\")",
+      "Bash(EDITOR=\"cat\" bin/rails credentials:edit)",
+      "Bash(RAILS_ENV=production RAILS_MASTER_KEY=4fc420536d686faf60d5418bc7be9eb3 DATABASE_URL=postgres://localhost/fake bin/rails runner \"puts 'boot ok'\")",
+      "Bash(RAILS_ENV=production RAILS_MASTER_KEY=4fc420536d686faf60d5418bc7be9eb3 bin/rails runner \"puts 'boot ok'\")",
+      "Bash(RAILS_ENV=production RAILS_MASTER_KEY=c85eb516fe96e46a18eb247503186361 bin/rails runner \"puts 'boot ok'\")",
+      "Bash(bin/rails credentials:show)",
+      "Bash(bundle show:*)",
+      "Bash(rtk gain:*)",
+      "Bash(rtk:*)",
+      "Bash(rails -v)",
+      "mcp__plugin_automem_memory__check_database_health",
+      "Bash(xargs basename:*)",
+      "Bash(wc:*)",
+      "mcp__plugin_automem_memory__recall_memory",
+      "mcp__plugin_automem_memory__store_memory",
+      "mcp__plugin_automem_memory__update_memory",
+      "Bash(gh repo:*)",
+      "Bash(bin/rubocop:*)",
+      "Bash(ls /home/zrk/code/yeetship/app/channels/*.rb)",
+      "Bash(ls /home/zrk/code/yeetship/app/jobs/*.rb)",
+      "Bash(echo \"=== ALL CONTROLLER TESTS \\(including admin\\) ===\" wc -l /home/zrk/code/yeetship/test/controllers/**/*_test.rb)",
+      "Bash(find /home/zrk/code/yeetship/test -name \"*_test.rb\" -exec wc -l {} +)",
+      "Bash(bin/rails db:migrate:status)",
+      "Bash(RAILS_ENV=test bin/rails db:schema:load)",
+      "Bash(RAILS_ENV=test bin/rails db:drop db:create db:schema:load)",
+      "Bash(bin/rails db:schema:dump)",
+      "Bash(bin/rails db:migrate:redo:*)",
+      "Bash(grep -E \"\\\\.\\(env|yml|yaml|encrypted\\)$\")",
+      "Bash(bundle list:*)",
+      "Bash(git update-ref:*)",
+      "Bash(git reflog:*)",
+      "Bash(git gc:*)",
+      "Bash(git reset:*)",
+      "Bash(git revert:*)",
+      "WebFetch(domain:render.com)",
+      "WebFetch(domain:api-docs.render.com)",
+      "Bash(gmc \"Replace test_helper.rb with fixture-free version before running builder tests\")",
+      "Bash(gmc.*)",
+      "Bash(gmc)",
+      "Bash(gmc \"Patch schema.rb to alias jsonb to json for SQLite\")",
+      "Bash(gmc \"Fix jsonb/SQLite: gsub schema text instead of patching constant\")",
+      "Bash(gmc \"Patch uuid columns to string for SQLite test DB\")",
+      "Bash(bin/rails db:rollback)",
+      "Bash(bin/brakeman --no-pager -f json)",
+      "Bash(bin/brakeman --no-pager -q)",
+      "Bash(gmc \"Ignore brakeman false positives for builder test runner Open3 calls\")",
+      "Bash(git cherry-pick:*)",
+      "Bash(python3 -c ' *)",
+      "Bash(bin/brakeman --no-pager --format json)",
+      "Bash(python3 *)",
+      "Bash(bin/brakeman --no-pager)",
+      "Bash(bin/rails  *)",
+      "Bash(grep *)",
+      "Bash(ruby *)",
+      "WebFetch(domain:pub.dev)",
+      "WebFetch(domain:github.com)",
+      "Bash(flutter --version)",
+      "Bash(mise plugins *)",
+      "Bash(mise list-all *)",
+      "Bash(mise install *)",
+      "Bash(mise use *)",
+      "Bash(pg_isready *)",
+      "Bash(bundle --version)",
+      "Bash(/usr/bin/psql *)",
+      "Bash(flutter create *)",
+      "Bash(flutter pub *)",
+      "Bash(mise plugin *)",
+      "Bash(mise uninstall *)",
+      "Bash(flutter test *)",
+      "mcp__plugin_everything-claude-code_context7__resolve-library-id",
+      "mcp__plugin_everything-claude-code_exa__web_search_exa",
+      "mcp__plugin_everything-claude-code_exa__web_fetch_exa",
+      "mcp__plugin_everything-claude-code_github__get_file_contents",
+      "Bash(flutter analyze *)",
+      "Bash(flutter build *)",
+      "Bash(RAILS_ENV=test bin/rails db:create db:migrate)",
+      "Bash(RAILS_ENV=development bin/rails db:migrate)",
+      "Bash(RAILS_ENV=test bin/rails runner 'puts User.pluck\\(:id, :email_address\\).inspect')",
+      "Bash(redis-cli ping *)",
+      "Bash(bundle check *)",
+      "Bash(overmind start *)",
+      "Bash(overmind echo *)",
+      "Bash(curl -s http://localhost:3000/up)",
+      "Bash(overmind quit *)",
+      "WebFetch(domain:sqids.org)",
+      "Bash(curl -sf http://localhost:3000/up)",
+      "Bash(kill %1)",
+      "Bash(timeout 5 build/linux/x64/release/bundle/app)",
+      "Bash(API_URL=http://localhost:3001 build/linux/x64/debug/bundle/app)",
+      "Bash(kill 1007285)",
+      "Bash(build/linux/x64/debug/bundle/app)",
+      "Bash(DISPLAY=:0 import -window root /tmp/polycule-app-screenshot.png)",
+      "Bash(DISPLAY=:0 scrot /tmp/polycule-app-screenshot.png)",
+      "Bash(import *)",
+      "Bash(xdotool search *)",
+      "Bash(xwininfo -root -tree)",
+      "Bash(wmctrl -l)",
+      "Bash(kill 1011968)",
+      "Bash(dart pub *)",
+      "Bash(fuser 3000/tcp)",
+      "Bash(netstat -tlnp)",
+      "Bash(xxd /tmp/login_response.json)",
+      "Bash(flutter run *)",
+      "Skill(ui)",
+      "Bash(/home/zrk/code/polycule/app/build/linux/x64/release/bundle/app *)",
+      "mcp__uidotsh__uidotsh_fetch",
+      "mcp__plugin_everything-claude-code_sequential-thinking__sequentialthinking",
+      "Bash(lsof -ti:3001)",
+      "mcp__plugin_everything-claude-code_playwright__browser_navigate",
+      "Bash(pkill -f 'build/linux/x64/debug/bundle/app')",
+      "Bash(pkill -f 'flutter run')",
+      "Bash(XDG_DATA_HOME=/tmp/polycule-user-a XDG_CONFIG_HOME=/tmp/polycule-user-a HOME=/tmp/polycule-user-a ./app)",
+      "Bash(echo \"Instance A PID: $!\")",
+      "Bash(XDG_DATA_HOME=/tmp/polycule-user-b XDG_CONFIG_HOME=/tmp/polycule-user-b HOME=/tmp/polycule-user-b ./app)",
+      "Bash(echo \"Instance B PID: $!\")",
+      "Bash(nohup env *)",
+      "Bash(kill 243073 248925 250856)",
+      "Bash(kill -9 251734)",
+      "Bash(kill -9 236294 238964)",
+      "Bash(pkill -9 -f 'polycule.*bundle/app')",
+      "Bash(pkill -9 -f 'bundle/app')",
+      "Bash(/home/zrk/code/polycule/app/build/linux/x64/debug/bundle/app)",
+      "Bash(kill 365319 365321)",
+      "Bash(secret-tool clear *)",
+      "Bash(pkill -f 'build/linux/x64/release/bundle/app')",
+      "Bash(pkill -9 -f 'build/linux/x64/release/bundle/app')",
+      "Bash(HOME=/tmp/polycule-test-left XDG_DATA_HOME=/tmp/polycule-test-left/.local/share build/linux/x64/release/bundle/app *)",
+      "Bash(HOME=/tmp/polycule-test-right XDG_DATA_HOME=/tmp/polycule-test-right/.local/share build/linux/x64/release/bundle/app *)",
+      "Bash(HOME=/tmp/polycule-test-left XDG_DATA_HOME=/tmp/polycule-test-left/.local/share ./build/linux/x64/release/bundle/app)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(HOME=/tmp/polycule-test-right XDG_DATA_HOME=/tmp/polycule-test-right/.local/share ./build/linux/x64/release/bundle/app)",
+      "Bash(echo \"LEFT PID: $!\")",
+      "Bash(echo \"RIGHT PID: $!\")",
+      "Bash(./build/linux/x64/release/bundle/app)",
+      "Bash(kill *)",
+      "Bash(disown)",
+      "Bash(xargs ls *)",
+      "Bash(pkill -f \"flutter\")",
+      "Bash(pkill -f flutter)",
+      "Bash(xargs -I{} echo \"error_count={}\")",
+      "Bash(pkill -9 -f \"flutter_tool\")",
+      "Bash(pkill -9 -f \"dart.*flutter\")",
+      "Bash(echo \"PID=$!\")",
+      "Bash(pkill -f \"flutter run\")",
+      "Bash(chromium --headless --disable-gpu --screenshot=/tmp/mockups/bloom.png --window-size=1280,900 file:///tmp/mockups/bloom.html)",
+      "Bash(chromium --headless --disable-gpu --screenshot=/tmp/mockups/prism.png --window-size=1280,900 file:///tmp/mockups/prism.html)",
+      "Bash(chromium --headless --disable-gpu --screenshot=/tmp/mockups/maison.png --window-size=1280,900 file:///tmp/mockups/maison.html)",
+      "Bash(wait)",
+      "Bash(chromium --headless --disable-gpu --screenshot=/tmp/mockups/bloom-full.png --window-size=1400,920 file:///tmp/mockups/bloom.html)",
+      "Bash(chromium --headless --disable-gpu --screenshot=prism-full.png --window-size=1400,920 file:///tmp/mockups/prism.html)",
+      "Bash(chromium --headless --disable-gpu --screenshot=maison-full.png --window-size=1400,920 file:///tmp/mockups/maison.html)",
+      "Bash(chromium --headless --disable-gpu --screenshot=bloom-refined.png --window-size=1400,920 file:///tmp/mockups/bloom-refined.html)",
+      "Read(//home/zrk/.config/**)",
+      "Read(//home/zrk/**)",
+      "mcp__plugin_everything-claude-code_playwright__browser_take_screenshot",
+      "Bash(DISPLAY=:0 scrot -u /tmp/app-login.png)",
+      "Bash(DISPLAY=:0 import -window root /tmp/app-login.png)",
+      "Bash(dpkg -l)",
+      "Bash(DISPLAY=:0 xdotool search --name \"polycule\")",
+      "Bash(DISPLAY=:0 xdotool search --name \"Polycule\")",
+      "Bash(DISPLAY=:0 wmctrl -l)",
+      "Bash(overmind stop *)",
+      "Bash(echo \"App 1 PID: $!\")",
+      "Bash(echo \"App 2 PID: $!\")",
+      "Bash(echo \"App 3 PID: $!\")",
+      "Bash(npm create *)",
+      "Bash(npm install *)",
+      "Bash(overmind restart *)",
+      "Bash(rustc --version)",
+      "Bash(cargo --version)",
+      "Bash(wasm-pack --version)",
+      "Bash(rustup target *)",
+      "Bash(wasm-pack build *)",
+      "Bash(cargo doc *)",
+      "Bash(npm i *)",
+      "Bash(./node_modules/.bin/vite --host 0.0.0.0)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173)",
+      "Bash(DISPLAY=:0 xdg-open http://localhost:5173)",
+      "Bash(flutter clean *)",
+      "Bash(pacman -Qs xdotool)",
+      "Bash(pkill -f 'bundle/app')",
+      "Bash(DISPLAY=:0 build/linux/x64/release/bundle/app *)",
+      "Bash(DISPLAY=:0 import -window root /tmp/polycule_redesign.png)",
+      "Bash(DISPLAY=:0 xdotool search --name \"polycule\\\\|Polycule\\\\|app\")",
+      "Bash(DISPLAY=:0 xdotool search --class \"\")",
+      "Bash(DISPLAY=:0 scrot /tmp/polycule_redesign.png)",
+      "Bash(DISPLAY=:0 xwd -root -silent)",
+      "Bash(convert xwd:- /tmp/polycule_redesign.png)",
+      "Bash(DISPLAY=:0 gnome-screenshot -f /tmp/polycule_redesign.png)",
+      "Bash(echo \"API starting \\(PID: $!\\)\")",
+      "Bash(pkill -f \"build/linux.*bundle/app\")",
+      "Bash(echo \"App launched \\(PID: $!\\)\")",
+      "Bash(echo \"Rails server starting \\(PID: $!\\)\")",
+      "Bash(systemctl is-active *)",
+      "Bash(DISPLAY=:0 import -window root /tmp/polycule_screenshot.png)",
+      "Bash(DISPLAY=:0 scrot /tmp/polycule_screenshot.png)",
+      "Bash(grim /tmp/polycule_screenshot.png)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(podman ps *)",
+      "Bash(bundle exec *)",
+      "Bash(echo \"Rails restarting \\(PID: $!\\)\")",
+      "Bash(echo \"Rails restarted \\(PID: $!\\)\")",
+      "Bash(grim /tmp/poly_current.png)",
+      "Bash(DISPLAY=:0 /home/zrk/code/polycule/app/build/linux/x64/release/bundle/app)",
+      "Bash(echo \"App relaunched \\(PID: $!\\)\")",
+      "Bash(grim /tmp/poly_onboarding.png)",
+      "Bash(swaymsg -t get_tree)",
+      "Bash(hyprctl clients *)",
+      "Bash(hyprctl dispatch *)",
+      "Bash(grim /tmp/poly_focused.png)",
+      "Bash(grim -g \"2680,893 449x823\" /tmp/poly_cropped.png)",
+      "Bash(hyprctl monitors *)",
+      "Bash(grim -g \"3910,1116 561x1028\" /tmp/poly_app.png)",
+      "Bash(grim -o DP-7 /tmp/poly_dp7.png)",
+      "Bash(pkill -f \"bundle/app\")",
+      "Bash(WAYLAND_DISPLAY=wayland-1 /home/zrk/code/polycule/app/build/linux/x64/release/bundle/app)",
+      "Bash(echo \"App 1: $!\")",
+      "Bash(echo \"App 2: $!\")",
+      "Bash(echo \"Rails PID: $!\")",
+      "Bash(build/linux/x64/release/bundle/app)",
+      "Bash(echo \"App1 PID: $!\")",
+      "Bash(echo \"App2 PID: $!\")",
+      "Bash(rm -f tmp/pids/server.pid)",
+      "Bash(bin/rails server *)",
+      "Bash(echo \"App1: $!\")",
+      "Bash(echo \"App2: $!\")",
+      "Bash(pkill -f \"flutter_tool\")",
+      "Bash(pkill -f \"flutter_tools\")",
+      "Bash(DISPLAY=:0 chromium --new-window \"http://localhost:5173\")",
+      "Bash(npx vite *)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(pkill -f \"dart.*flutter\")",
+      "Bash(FPID=$! sleep 20 echo \"---CHECKING---\" pgrep -f \"flutter_tools\")",
+      "Bash(scrot /tmp/graph_test.png)",
+      "Bash(grim /tmp/graph_test.png)",
+      "Bash(xdotool getactivewindow *)",
+      "Bash(xdg-open http://localhost:5173)",
+      "Bash(curl -s http://localhost:3001/login -H \"Content-Type: application/json\" -d '{\"email_address\":\"zack@example.com\",\"password\":\"password123\"}')",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/up)",
+      "Bash(./node_modules/.bin/tsc --noEmit)",
+      "Bash(google-chrome-stable --headless=new --disable-gpu --no-sandbox --user-data-dir=/tmp/chrome-graph-profile2 --screenshot=/tmp/graph-screenshots/step0.png --window-size=420,800 --virtual-time-budget=5000 'http://localhost:5180/#auth=vjWJ8SLFtATeMN8R1QkHWarR')",
+      "Bash(lsof -ti:5180)",
+      "Bash(./node_modules/.bin/vite --port 5180)",
+      "Bash(ghostty *)",
+      "Bash(./node_modules/.bin/vitest run *)",
+      "Bash(cat)",
+      "Bash(RAILS_ENV=test bin/rails db:create db:schema:load)",
+      "Bash(RAILS_ENV=test bin/rails db:environment:set RAILS_ENV=test)",
+      "Bash(dart analyze *)",
+      "Bash(redis-cli *)",
+      "Bash(convert -size 10x10 xc:red /tmp/test_upload.png)",
+      "Bash(convert --version)",
+      "Bash(vips --version)",
+      "Bash(convert -list format)",
+      "Bash(magick --version)",
+      "Bash(tmux new-session *)",
+      "Bash(tmux capture-pane *)",
+      "Bash(tmux kill-session *)",
+      "Bash(xdg-open http://localhost:5175)",
+      "Bash(pkill -f sidekiq)",
+      "Bash(tmux ls *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/cules)",
+      "Bash(lsof *)",
+      "Bash(tmux list-sessions *)",
+      "Bash(tmux send-keys *)",
+      "Bash(tmux list-windows *)",
+      "Bash(pkill -f \"flutter_tools.snapshot daemon\")",
+      "Bash(pkill -f \"polycule.*flutter\")",
+      "Bash(pkill -f \"flutter_tools.snapshot\")",
+      "Bash(flutter devices *)",
+      "Bash(pkill -f 'flutter run -d linux')",
+      "Bash(pkill -f 'vite')",
+      "Bash(pkill -f 'node.*vite')",
+      "Bash(fc-query fonts/Fraunces.ttf)",
+      "Bash(rtk proxy *)",
+      "Read(//tmp/**)",
+      "Bash(gh api *)",
+      "Bash(node *)",
+      "Bash(dart run *)",
+      "Bash(bin/rails runner *)",
+      "Bash(RAILS_ENV=test bin/rails db:environment:set)",
+      "Bash(npm test *)",
+      "Bash(git rm *)",
+      "Bash(jobs -l)",
+      "Bash(headroom stats *)",
+      "Bash(headroom gain *)",
+      "Bash(timeout 5 /home/zrk/.local/bin/rtk *)",
+      "Bash(timeout 10 /home/zrk/.local/bin/rtk init *)",
+      "Bash(pipx list *)",
+      "Bash(xargs -I {} basename {})",
+      "Bash(go version *)",
+      "Bash(go mod *)",
+      "Bash(timeout 10 go run ./cmd/testacule/)",
+      "Bash(go list *)",
+      "Bash(/usr/bin/find *)",
+      "Bash(xargs cat)",
+      "Bash(staticcheck ./...)",
+      "Bash(git *)",
+      "Bash(rtk git *)",
+      "Bash(/usr/bin/go test *)",
+      "Bash(go env *)",
+      "mcp__plugin_everything-claude-code_github__get_pull_request",
+      "mcp__plugin_everything-claude-code_github__get_pull_request_files",
+      "mcp__plugin_everything-claude-code_github__list_pull_requests",
+      "Edit",
+      "Write",
+      "MultiEdit",
+      "Read",
+      "Read(*)",
+      "Bash(npm:*)",
+      "Bash(yarn:*)",
+      "Bash(git:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(cat:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(chmod:*)",
+      "Bash(jq:*)",
+      "Bash(awk:*)",
+      "Bash(sed:*)",
+      "Bash(node:*)",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(py:*)",
+      "Bash(npx:*)",
+      "mcp__memory__store_memory",
+      "mcp__memory__recall_memory",
+      "mcp__memory__associate_memories",
+      "mcp__memory__update_memory",
+      "mcp__memory__delete_memory",
+      "mcp__memory__check_database_health"
+    ],
+    "deny": [
+      "Bash(sudo:*)",
+      "Bash(su:*)",
+      "Bash(rm -rf /*)",
+      "Bash(format:*)",
+      "Bash(fdisk:*)"
+    ],
+    "ask": [
+      "Bash(git push:*)"
+    ],
+    "defaultMode": "auto"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/zrk/.claude/plugins/cache/everything-claude-code/everything-claude-code/1.10.0/skills/continuous-learning-v2/hooks/observe.sh"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/zrk/.local/bin/icm hook post"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'echo \"$CLAUDE_TOOL_INPUT\" | grep -q \"git commit\" && /home/zrk/.claude/hooks/post-commit.sh || exit 0'",
+            "timeout": 10000
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/zrk/.local/bin/icm hook compact"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/zrk/.claude/plugins/cache/everything-claude-code/everything-claude-code/1.10.0/skills/continuous-learning-v2/hooks/observe.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/zrk/.local/bin/icm hook pre"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/zrk/.claude/plugins/cache/everything-claude-code/everything-claude-code/1.10.0/skills/strategic-compact/suggest-compact.sh",
+            "timeout": 5000
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|MultiEdit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/zrk/.claude/hooks/pre-tool-notify.sh",
+            "timeout": 10000
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'echo \"$CLAUDE_TOOL_INPUT\" | grep -q \"git push\" && /home/zrk/.claude/hooks/pre-push.sh || exit 0'",
+            "timeout": 60000
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "rtk hook claude"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/zrk/.local/bin/icm hook end"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/zrk/.local/bin/icm hook start"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/automem-session-start.sh\""
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/zrk/.claude/hooks/session-start.sh",
+            "timeout": 10000
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/zrk/.claude/skills/continuous-learning/evaluate-session.sh",
+            "timeout": 15000
+          }
+        ]
+      },
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CLAUDE_HOOK_TYPE=session_end bash \"$HOME/.claude/hooks/session-memory.sh\""
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/scripts/queue-cleanup.sh\""
+          },
+          {
+            "type": "command",
+            "command": "npx -y @verygoodplugins/mcp-automem queue --file \"$HOME/.claude/scripts/memory-queue.jsonl\" --limit 5"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/zrk/.claude/hooks/session-end.sh",
+            "timeout": 10000
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/zrk/.local/bin/icm hook prompt"
+          }
+        ]
+      }
+    ]
+  },
+  "worktree": {
+    "baseRef": "fresh"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash /home/zrk/.claude/statusline-command.sh"
+  },
+  "enabledPlugins": {
+    "claude-code-setup@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "everything-claude-code@everything-claude-code": true,
+    "feature-dev@claude-plugins-official": true,
+    "firebase@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "ralph-loop@claude-plugins-official": true,
+    "ruby-lsp@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "serena@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "terraform@claude-plugins-official": true,
+    "sentry@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "everything-claude-code": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/affaan-m/everything-claude-code.git"
+      }
+    },
+    "verygoodplugins": {
+      "source": {
+        "source": "github",
+        "repo": "verygoodplugins/claude-plugins"
+      }
+    }
+  },
+  "effortLevel": "high",
+  "autoUpdatesChannel": "stable",
+  "minimumVersion": "2.1.138",
+  "autoDreamEnabled": false,
+  "theme": "dark-ansi",
+  "editorMode": "normal",
+  "verbose": true,
+  "preferredNotifChannel": "ghostty",
+  "fileCheckpointingEnabled": false,
+  "remoteControlAtStartup": false,
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true
+}

@@ -1,0 +1,18 @@
+{
+  "migration_id": "20260620-083740",
+  "archived_at": "2026-06-20T08:37:40.473982479Z",
+  "settings_backup": "/home/zrk/code/whetstone-web/.whetstone/migration-20260620-083740/settings.json.backup",
+  "memstack_backup": null,
+  "automem_backup": null,
+  "removed_files": [
+    {
+      "original": "/home/zrk/code/whetstone-web/.claude/commands/whetstone-headroom.md",
+      "archived": "/home/zrk/code/whetstone-web/.whetstone/migration-20260620-083740/files/commands/whetstone-headroom.md"
+    },
+    {
+      "original": "/home/zrk/code/whetstone-web/.claude/commands/whetstone-status.md",
+      "archived": "/home/zrk/code/whetstone-web/.whetstone/migration-20260620-083740/files/commands/whetstone-status.md"
+    }
+  ],
+  "removed_hook_indices": []
+}
