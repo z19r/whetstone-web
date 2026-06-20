@@ -56,6 +56,12 @@ html[data-theme="light"] .page-grid {
 
 main { position: relative; z-index: 1; }
 
+.heart {
+  display: inline-block;
+  animation: heartbeat 1.4s ease-in-out infinite;
+  transform-origin: center;
+}
+
 /* ============================================================
    NAV
    ============================================================ */
