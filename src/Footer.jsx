@@ -63,8 +63,7 @@ function Footer() {
 
         <div className="meta">
           <span>// WHETSTONE · v2.2.2 · {new Date().getFullYear()}</span>
-          <span>Made in Chicago, with <span class="heart">🫀</span>
-          ©2026 z19r. All rights reserved.</span>
+          <span>Made in Chicago, with <span className="heart">🫀</span> ©2026 z19r. All rights reserved.</span>
           <span>BUILT WITH VIM · NO TELEMETRY</span>
         </div>
       </div>
