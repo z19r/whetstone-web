@@ -26,12 +26,12 @@ function Wordmark({ size = 22 }) {
 
 function Nav({ theme, onToggleTheme }) {
   const sections = [
-    { id: 'modules',  label: '01 · MODULES' },
-    { id: 'install',  label: '02 · INSTALL' },
-    { id: 'numbers',  label: '03 · NUMBERS' },
-    { id: 'editors',  label: '04 · EDITORS' },
-    { id: 'releases', label: '05 · RELEASES' },
-    { id: 'faq',      label: '06 · FAQ' },
+    { id: 'modules',  label: 'MODULES' },
+    { id: 'install',  label: 'INSTALL' },
+    { id: 'numbers',  label: 'NUMBERS' },
+    { id: 'editors',  label: 'EDITORS' },
+    { id: 'releases', label: 'RELEASES' },
+    { id: 'faq',      label: 'FAQ' },
   ];
 
   const isLight = theme === 'light';
