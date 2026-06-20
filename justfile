@@ -23,3 +23,11 @@ open port="8000":
 serve port="8000":
     just open {{port}} &
     just dev {{port}}
+
+# Deploy to Netlify
+deploy:
+    netlify deploy --prod
+
+# Deploy preview (draft)
+deploy-preview:
+    netlify deploy

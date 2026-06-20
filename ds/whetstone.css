@@ -136,6 +136,7 @@
 }
 .ws-badge .pulse { width: 6px; height: 6px; background: currentColor; }
 .ws-badge--acid    { color: var(--c-acid); background: rgba(214,255,46,0.08); }
+html[data-theme="light"] .ws-badge--acid { color: var(--c-royal); background: rgba(107,47,224,0.08); border-color: var(--c-royal); }
 .ws-badge--mag     { color: var(--c-magenta); background: rgba(255,46,147,0.08); }
 .ws-badge--royal   { color: var(--c-lilac); background: rgba(107,47,224,0.18); border-color: var(--c-royal); }
 .ws-badge--bone    { color: var(--c-ink); background: var(--c-bone); border-color: var(--c-bone); }
@@ -260,6 +261,9 @@
 .ws-callout--note .ws-callout-mark, .ws-callout--note .ws-callout-body h4 { color: var(--c-lilac); }
 .ws-callout--tip { border-color: var(--c-acid); box-shadow: 4px 4px 0 0 var(--c-acid); }
 .ws-callout--tip .ws-callout-mark, .ws-callout--tip .ws-callout-body h4 { color: var(--c-acid); }
+html[data-theme="light"] .ws-callout--tip { border-color: var(--c-royal); box-shadow: 4px 4px 0 0 var(--c-royal); }
+html[data-theme="light"] .ws-callout--tip .ws-callout-mark,
+html[data-theme="light"] .ws-callout--tip .ws-callout-body h4 { color: var(--c-royal); }
 .ws-callout--warn { border-color: var(--c-magenta); box-shadow: 4px 4px 0 0 var(--c-magenta); background: rgba(255,46,147,0.06); }
 .ws-callout--warn .ws-callout-mark, .ws-callout--warn .ws-callout-body h4 { color: var(--c-magenta); }
 .ws-callout--danger { border-color: var(--c-magenta); box-shadow: 4px 4px 0 0 var(--c-acid); background: rgba(255,46,147,0.12); }
@@ -315,6 +319,10 @@
   color: var(--accent);
   border: var(--b-thin) solid var(--accent);
   padding: 1px 6px;
+}
+html[data-theme="light"] :not(pre) > code,
+html[data-theme="light"] .ws-icode {
+  background: rgba(107,47,224,0.06);
 }
 
 /* ============================================================
